@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h1>результаты для страны {{ country }}</h1>
+    <p>ценовой диапазон: {{ price_range }}</p>
+    <ul>
+        {% for tour in tours %}
+            <li>{{ tour['country'] }} - {{ tour['price'] }} USD ({{ tour['count days'] }} дней, {{ tour['tour operator'] }})</li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="btn btn-secondary">back</a>
+</div>
+{% endblock %}
+
+

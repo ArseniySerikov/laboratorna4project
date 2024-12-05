@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cce4e9;
+    margin: 0;
+    padding: 0;
+    
+}
+table {
+    margin: 0 auto; 
+    border-collapse: collapse; 
+}
+
+table th, table td {
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    text-align: center; 
+}
+
+table th {
+    background-color: #f2f2f2; 
+}
+
+header {
+    background-color: #23759c;
+    color: white;
+    padding: 33px 0;
+    text-align: center;
+}
+h1{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+main {
+    padding: 20px;
+}
+
+.nosuch{
+    text-align: center;
+
+}
+
+.error img {
+    width: 600px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

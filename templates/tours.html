@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Country</th>
+            <th>Price</th>
+            <th>Number of Days</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tour in ready_tour %}
+        <tr>
+            <td>{{ tour['country'] }}</td>
+            <td>{{ tour['price'] }}</td>
+            <td>{{ tour['count days'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+

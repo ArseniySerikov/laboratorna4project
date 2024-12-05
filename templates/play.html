@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Rock, Paper, Scissors Game</h1>
+    
+    {% if result %}
+    <div class="alert alert-info">
+        <h2>Game Result</h2>
+        <p>You chose: 
+            <img src="{{ url_for('static', filename='uploads/' + player_choice + '.png') }}" alt="{{ player_choice }}" width="100">
+        </p>
+        <p>The computer chose: 
+            <img src="{{ url_for('static', filename='uploads/' + computer_choice + '.png') }}" alt="{{ computer_choice }}" width="100">
+        </p>
+        <h3>{{ result }}</h3>
+    </div>
+    {% endif %}
+    
+    <form action="/play" method="POST">
+        <div class="form-group">
+            <label>Make your choice:</label>
+            <div>
+                <label>
+                    <input type="radio" name="choice" value="rock" required>
+                    <img src="{{ url_for('static', filename='uploads/rock.png') }}" alt="Rock" width="100">
+                </label>
+                <label>
+                    <input type="radio" name="choice" value="scissors" required>
+                    <img src="{{ url_for('static', filename='uploads/scissors.png') }}" alt="Scissors" width="100">
+                </label>
+                <label>
+                    <input type="radio" name="choice" value="paper" required>
+                    <img src="{{ url_for('static', filename='uploads/paper.png') }}" alt="Paper" width="100">
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Play</button>
+    </form>
+</div>
+{% endblock %}
+
+

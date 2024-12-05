@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+<h1>Most Expensive Tour to Turkey</h1>
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Country</th>
+            <th>Tour Operator</th>
+            <th>Price</th>
+            <th>Number of Days</th>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ tour['country'] }}</td>
+            <td>{{ tour['tour operator'] }}</td>
+            <td>{{ tour['price'] }}</td>
+            <td>{{ tour['count days'] }}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
+
+<form method="POST" action="/process" class="mt-4">
+    <div class="mb-3">
+        <label for="animal" class="form-label">Choose an animal:</label>
+        <select class="form-select" id="animal" name="animal" required>
+            <option value="" disabled selected>Choose pet</option>
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+            <option value="Bird">Bird</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Choose direction:</label><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="direction" id="oldest" value="Oldest" required>
+            <label class="form-check-label" for="oldest">Oldest</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="direction" id="youngest" value="Youngest" required>
+            <label class="form-check-label" for="youngest">Youngest</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
